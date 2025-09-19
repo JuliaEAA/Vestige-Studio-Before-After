@@ -1,0 +1,75 @@
+@media (min-width: 800x) {
+    body {
+    display: grid;
+    grid-template-columns: 500px 4fr;
+    grid-template-rows: 250px 4fr 40px;
+    grid-template-areas:
+    "header"
+    "sidebar"
+    "main"
+    "footer";
+}
+}
+.logo {
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 20px;
+    
+}
+.gallery {
+    display: grid;
+    margin-block: 200px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    background-color: #DBD0BC;
+}
+.gallery-before {
+    border: 4px solid #8E765C;
+    border-radius: 20px;
+    width: 200px;
+    height: 270px;
+    margin-left: 70px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.gallery-after {
+    border: 4px solid #8E765C;
+    border-radius: 20px;
+    width: 200px;
+    height: 270px;
+    margin-top: 50px;
+}
+.gallery-before:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition:all 0.5s ease;
+}
+.gallery-after:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition:all 0.5s ease;
+}
+.qr {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 80px;
+    border: 4px solid #8E765C;
+    border-radius: 20px;
+    background-color: #E0D6BF;
+}
+.card-content {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.social-qr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.insta-qr, .fb-qr {
+    height: 325px;
+    width: 260px;
+    }
