@@ -3,7 +3,6 @@
 .vestige_logo {
     display: flex;
     flex-wrap: wrap;
-    background-color: white;
     justify-content: center;
     align-items: center;     
     padding: 0;           /* responsive vertical padding */
@@ -21,7 +20,7 @@
 }
 
 body {
-    background-color: #EFE9DC;
+    background-color: #E0D5BF;
     font-family: "Rhodium Libre", serif;
 }
 .before_header { 
@@ -38,6 +37,7 @@ body {
     color: #ffffff;
     padding-left: 60px;
     flex-wrap: wrap;
+    text-shadow: 6px 6px #5D4E3D;
 }
 .p1 { /* text below before and after heading */
     display: flex;
@@ -53,9 +53,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
-    background-color: #DBD0BC;
-    border-radius: 40px;
+    min-width: fit-content;
+    gap: 100px;
     position: relative;
     margin-block: 50px;
     padding-top: 60px;
@@ -64,12 +63,22 @@ body {
 .gallery-pair {
     display: flex;
     flex-direction: row;
-    gap: 2px; /* gap between before/after */
+    gap: 0px; /* gap between before/after */
 }
-.gallery-before,
+.gallery-before{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; 
+    width: 200px;
+    height: 270px;
+    object-fit: cover;
+    margin: 0; /* Remove extra margins for even grid */
+    display: block;
+    box-sizing: border-box;
+    transition: all 0.5s ease;    
+}
 .gallery-after {
-    border: 4px solid #8E765C;
-    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     width: 200px;
     height: 270px;
     object-fit: cover;
@@ -81,7 +90,7 @@ body {
 .gallery-before:hover,
 .gallery-after:hover {
     transform: scale(1.2);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgb(255, 202, 77);
     transition:all 0.5s ease;
 }
 .qr { /* Box behind qr codes */
@@ -92,15 +101,15 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 60px;
-    border: 4px solid #8E765C;
-    border-radius: 20px;
-    background-color: #E0D6BF;
+    background-color: #AD9476;
     box-sizing: border-box;
+    min-width: 420px;
 }
 .card-content { /* text in between qr codes */
     position: relative;
     text-align: center;
     font-size: 30px;
+    min-width: 420px;
 }
 .social-qr { /* qr code section */
     display: flex;
@@ -108,11 +117,13 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    min-width: fit-content;
 }
 .insta-qr, .fb-qr { /* qr codes */
     height: 250px;
     width: auto;
     box-sizing: border-box;
+    min-width: fit-content;
     }
 .dekstop-icon{
     width: 18px;
@@ -129,15 +140,17 @@ body {
   width: 300px;
   height: 150px;
   margin-left: -30px;
+  
 }
 .footer{
     display: block;
-    margin-top: 60px;
+    margin-top: 0px;
     width: 100vw;
     color: white;
     background-image: url('images/background.png');
     background-size: cover;  
     background-position: center;
+    min-width: fit-content;
 }
 
 .fat-footer{
@@ -147,6 +160,7 @@ body {
     padding: 40px;
     justify-content: space-between;
     flex-wrap: wrap;
+    min-width: fit-content;
 }
 
 .social-media{
