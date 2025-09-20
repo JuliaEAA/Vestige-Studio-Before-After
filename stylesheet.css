@@ -1,4 +1,565 @@
+/************ HOME PAGE **********/
+html {
+    height: 100%;
+    background-color:#EFE9DB;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'Rhodium Libre';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rhodiumlibre/v21/1q2AY5adA0tn_ukeHcQHqpx6lELBe72g.woff2) format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
+}
+
+@font-face {
+  font-family: 'Rhodium Libre';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rhodiumlibre/v21/1q2AY5adA0tn_ukeHcQHqpx6lE3Be72g.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Rhodium Libre';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rhodiumlibre/v21/1q2AY5adA0tn_ukeHcQHqpx6lEPBew.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.logo {
+    display: flex;
+    justify-content: center;   /* centers the image inside logo div */
+    align-items: center;
+    flex: 1;                   /* let it expand between burger & button */
+    margin: 70px 0 0 0;                 /* remove extra margin */
+    padding: 0; 
+    width: auto;               /* don’t stretch full width */
+    max-width: none;           /* remove the hard limit */
+    box-sizing: border-box;
+}
+.logo img {
+    max-width: 500px;   /* adjust size as needed */
+    height: auto;
+    display: block;
+}
+body {
+    min-height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    color: black;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url("images/hero.png");
+  background-size: cover;
+  background-position: center 50% top 20%;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.burger-menu {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #1C4305;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-top: -20px;
+}
+.book-button {
+  position: absolute;
+  top: 20px;    
+  right: 20px;  
+  background: #1C4305;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0px;
+}
+
+.book-now:hover {
+  background: #ffffff;
+}
+
+.heading {
+    font-family: 'Rhodium Libre';
+    font-size: 40px;
+    color: #8D765B;
+}
+
+.sub-heading {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: black
+}
+
+.about-me-text{
+  padding-right: 50px;
+
+}
+
+
+.about-me{
+    margin: 0px;
+    background-color: white;
+    padding: 0px;
+    background: none;
+}
+
+.about-me > .card {
+    background: white;
+    border-radius: 0;
+    margin: 0;
+    max-width: none;
+    
+    box-sizing: border-box;
+    padding: 40px 0;
+}
+
+.card{
+display: flex;
+flex-wrap: nowrap;
+justify-content: flex-start;
+align-items: flex-start;
+max-width: 1200px;
+margin: 20px auto;
+border-radius: 8px;
+background-color: white;
+padding: 10px;
+gap:60px;
+}
+ 
+
+.about-me-image {
+    margin: 28px;
+    height: 480px;
+    width: 350px;
+    border-radius: 4px;
+    padding-left: 20px;
+}
+
+.about-me-content{
+  flex: 1;
+  
+}
+
+.about-me > .card,
+.map-section > .card {
+    width: 100%;
+}
+
+.FAQ-image{
+    margin: 28px;
+    height: 450px;
+    width: 600px;
+    border-radius: 4px;
+    padding-right: 25px;
+}
+
+.FAQ-content{
+   flex: 1;
+   background-color: #BDAD96;
+   padding: 0;
+   padding-left: 50px;
+}
+
+.FAQ-text{
+  padding: 5px;
+  
+}
+
+.card.faq-card {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+
+.faq-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.faq-item p {
+    margin: 0;
+    flex: 1;
+}
+
+.faq-arrow {
+    margin-left: 15px;
+    font-size: 1.2em;
+    border: solid #847869;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.dekstop-icon{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px; 
+}
+
+.dekstop-icons{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px; 
+}
+
+.map-section {
+    margin: 0;
+    padding: 0;
+    padding-left: 50px;
+    background: none;
+    font-family: "Rhodium Libre";
+}
+
+.map-section > .card {
+    background: white;
+    border-radius: 0;
+    margin: 0;
+    max-width: none;
+    
+    box-sizing: border-box;
+    padding: -10px 0 40px 0;
+}
+
+.logo-footer{
+  width: 350px;
+  height: 200px;
+  margin-left: -50px;
+}
+
+.footer{
+    margin-top:0px;
+    color: white;
+    background-image: url('images/background.png');
+    background-size: cover;   
+    background-position: center;
+
+}
+
+.footer-heading{
+      font-family: 'Rhodium Libre';
+}
+
+.fat-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.social-media{
+    margin-right: 80px;
+}
+
+.contact, .social-media {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact h2, .social-media h2 {
+  margin-bottom: 20px;
+}
+
+.contact p, .social-media p {
+  display: flex;
+  align-items: center; 
+  gap: 10px;           
+  margin: 5px 0;
+}
+
+.contact {
+    margin-right: 80px;
+}
+
+.social-media {
+    margin-left: 80px;
+}
+
+.social-mobile{
+  display: none;
+}
+
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    z-index: 1000;
+}
+
+
+.menu-toggle:checked ~ .mobile-menu-overlay {
+    display: block;
+}
+
+
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background-image: linear-gradient(180deg, #273725, #486645);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    padding: 40px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+
+.mobile-menu  {
+    color: #1C4305;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.close-menu {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+.menu-items {
+  margin-top: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.burger-menu {
+    cursor: pointer;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #1C4305;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-me > .card,
+  .map-section > .card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .map-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .logo{
+     width: 100%;
+    height: auto;
+    display: block;
+    padding-top: 150px;
+    padding-right: 400px;
+  }
+
+    .book-button{
+       position: absolute;
+       bottom: 20px;    
+       left: 50%;         
+       transform: translateX(-50%); 
+       padding: 8px 16px;
+       font-size: 0.9rem;
+       top: auto;
+       right: auto;
+       margin: 6% 0;
+       width: 60%;
+       height: 10%;
+       background: #1cea0a;
+    }
+
+    .burger-menu {
+      color:#EFE9DB;
+    }
+
+    .card {
+    flex-direction: column;
+    align-items: center;
+    gap:0;
+  }
+    .about-me-image {
+    display: block;
+    margin: 0 auto 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    width: 90%;
+    height: auto;
+  }
+  .about-me-content {
+    padding: 0;
+    margin: 0;
+  }
+.heading{
+   padding-left: 7%;
+}
+
+.about-me-text{
+  padding-left: 7%;
+}
+
+.sub-heading{
+  padding-left:7% ;
+}
+
+  .card.faq-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .FAQ-image {
+    width: 90%;
+    height: auto;
+    margin: 0 auto 20px auto;
+    order: -1;
+    padding: 0;
+    display: block;
+  }
+  .FAQ-content {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .faq-item{
+    padding: 20px;
+    margin: 0px;
+  }
+  .map-section iframe {
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+    height: 400px;
+    width: 380px; /* or adjust as needed */
+    display: block;
+    margin: 0 auto;
+  
+}
+
+.footer {
+    position: relative;
+    background-image: url('images/smallFooter.png');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+    font-size: 14px;
+  }
+
+  .fat-footer {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .logo-footer,
+    .footer-heading,
+    .social-desktop{
+    display: none; 
+  }
+
+  .contact, .social-media {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .contact p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+  }
+.contact {
+    padding-bottom: 18px; /* Adjust this value as needed */
+  }
+
+  .social-media {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex !important;
+    display: flex;
+    gap: 15px;
+  }
+
+  .social-media p {
+    display: none; 
+  }
+  .social-mobile {
+    display: flex;
+    gap: 20px; 
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    z-index: 2;
+  }
+
+  .social-mobile img {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+
+}
+/*********** REVIEWS PAGE ************/
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rhodium+Libre&display=swap');
+
+header {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url("images/hero.png");
+  background-size: cover;
+  background-position: center 50% top 20%;
+  background-repeat: no-repeat;
+  color: white;
+}
 
 .vestige_logo {
     display: flex;
@@ -20,7 +581,7 @@
 }
 
 body {
-    background-color: #E0D5BF;
+    background-color: #BDAD96;
     font-family: "Rhodium Libre", serif;
 }
 .before_header { 
@@ -93,6 +654,40 @@ body {
     box-shadow: 0 0 10px rgb(255, 202, 77);
     transition:all 0.5s ease;
 }
+.reviews {
+  background-color: #f9f6f1;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.reviews-heading {
+  font-family: 'Rhodium Libre', serif;
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 200;
+  font-style: normal;
+  color: #574839;
+  flex-wrap: wrap;
+  text-shadow: 6px 6px #E0D5BF;                 /* remove default margins */ 
+}
+
+.review {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.review p {
+  margin: 0;
+}
+
 .qr { /* Box behind qr codes */
     display: flex;
     flex-wrap: wrap;
@@ -136,7 +731,7 @@ body {
     height: 20px;
     margin-right: 20px; 
 }
-.logo{
+.footerlogo{
   width: 300px;
   height: 150px;
   margin-left: -30px;
@@ -182,13 +777,14 @@ body {
   gap: 10px;           
   margin: 5px 0;
 }
+
 a:link {
     color: white;
     background-color: transparent;
     text-decoration: none;
 }
 a:visited {
-    color: #E0D7BE;
+    color: #ffffff;
     background-color: transparent;
     text-decoration: none;
 }
@@ -202,3 +798,4 @@ a:active {
     background-color: transparent;
     text-decoration: underline;
 }
+
